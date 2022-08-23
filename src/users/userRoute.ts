@@ -1,8 +1,10 @@
-import express from "express"
+import express, { NextFunction,Request,Response } from "express"
+import { userCreationValidator } from "../middlewares/validation"
+// import { userCreationValidator } from "../middlewares/validation"
 import User from "./userSchema"
 const userRouter = express.Router()
 // 1
-userRouter.post("/", async (req, res, next) => {
+userRouter.post("/", userCreationValidator, async (req: Request, res: Response, next: NextFunction) => {
     try {
         if (!req.body.firstName || !req.body.lastName || !req.body.email) {
             res.status(400).send("Missing required fields")
@@ -11,7 +13,7 @@ userRouter.post("/", async (req, res, next) => {
             res.send(user)
         }
     } catch (error) {
-        next(error)
+        console.log(error)
     }
 })
 // 2
