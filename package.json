@@ -7,7 +7,7 @@
     "test": "jest",
     "watch": "jest --watch",
     "dev": "ts-node-dev ./src/index",
-    "start": "node ./src/index"
+    "start": "ts-node-dev ./src/index"
   },
   "author": "",
   "license": "ISC",
