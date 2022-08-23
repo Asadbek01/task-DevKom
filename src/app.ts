@@ -14,5 +14,5 @@ server.use(cors());
 // Routes
 server.use('/users', userRouter);
 
-export { server };
+export default  server ;
 
