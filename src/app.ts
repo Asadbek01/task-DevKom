@@ -9,8 +9,7 @@ import {
     unauthorizedError
 } from "./middlewares";
 
-import dotenv from "dotenv";
-dotenv.config();
+;
 const server = express();
 
 

@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "watch": "jest --watch",
-    "dev": "ts-node-dev  -r dotenv/config ./src/index",
+    "dev": "ts-node-dev  ./src/index",
     "start": "ts-node ./src/index"
   },
   "author": "",
