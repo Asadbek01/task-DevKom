@@ -2,9 +2,9 @@ import express from "express";
 import mongoose from "mongoose";
 import  {server}  from "./app";
 import listEndpoints from "express-list-endpoints";
-
+import dotenv from "dotenv"
+dotenv.config()
 const port = process.env.PORT! || 3001;
-console.log(process.env.PORT);
 
 // Db connection
 mongoose.connect(process.env.MONGODB_CONNECTION!).then(() => {
